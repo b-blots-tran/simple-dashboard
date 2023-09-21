@@ -33,8 +33,8 @@ ul {
   grid-row-end: 1;
   background-color: white;
   display: grid;
-  grid-template-columns: 3fr 2fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
+  grid-template-rows: 1fr 1.5fr;
   z-index: 2;
   box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2);
 }
@@ -87,6 +87,7 @@ ul {
   font-size: 1.5rem;
   margin: 4rem 1rem 0 10%;
 }
+
 .left-nav-list li a,
 .left-options-list li a {
   display: flex;
@@ -107,19 +108,105 @@ ul {
 }
 
 .top-search-bar-grid-item {
-  border-bottom: 1px solid black;
+  display: flex;
+  flex-direction: row;
   padding: 25px;
+  grid-column-start: 1;
+  grid-column-end: 5;
 }
-.top-notification-area-grid-item {
-  border-bottom: 1px solid black;
-  border-left: 1px solid black;
-}
-.top-heading-grid-item {
-}
-.top-button-group-grid-item {
-  border-left: 1px solid black;
+.search-icon {
+  width: 28px;
+  margin-right: 1rem;
+  margin-left: 2rem;
 }
 
+#search-bar {
+  width: 70%;
+  border-radius: 12px;
+  background-color: var(--main-color);
+  outline: none;
+  border: none;
+  padding: 6px 10px;
+}
+
+.top-notification-area-grid-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  margin-right: 5rem;
+  gap: 2rem;
+}
+.notification-icon {
+  width: 28px;
+}
+.notification-avatar {
+  width: 48px;
+}
+.notifcation-name {
+  font-size: 1.5rem;
+}
+.top-heading-grid-item {
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+  grid-row: 1fr 1fr;
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+.heading-avatar {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-left: 3rem;
+}
+.heading-avatar img {
+  width: 64px;
+  margin-right: 1rem;
+}
+.heading-greeting {
+  display: flex;
+  align-items: end;
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0;
+}
+.heading-username {
+  display: flex;
+  font-weight: 600;
+  font-size: 2rem;
+  margin: 0;
+}
+.top-button-group-grid-item {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  grid-column-start: 4;
+  grid-column-end: 6;
+  margin-right: 5rem;
+}
+.top-button-list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.button {
+  padding: 10px 30px;
+  background-color: var(--secondary-color);
+  border-radius: 30px;
+  color: white;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+}
+.button:hover {
+  cursor: pointer;
+  background-color: var(--highlight-color);
+}
 .content-primary-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
